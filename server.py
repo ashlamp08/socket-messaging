@@ -5,7 +5,7 @@ import datetime
 import os
 
 host = ""
-port = 8080
+port = 12234
 os.system("clear")
 
 address = (host, port)

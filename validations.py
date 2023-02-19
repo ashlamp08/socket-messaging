@@ -107,16 +107,16 @@ def validate_delete_group(string, user, groups):
 
     if len(split_command) < 2:
         error_message = f"Please check command to delete group again."
-        return error_message, None, None
+        return error_message, None
 
     groupname = split_command[1]
 
     if groupname not in groups:
         error_message = f"Group {groupname} does not exist."
-        return error_message, None, None
+        return error_message, None
 
     if user.username != groups[groupname].owner:
         error_message = f"You are not the owner of group {groupname}."
-        return error_message, None, None
+        return error_message, None
 
     return None, groupname

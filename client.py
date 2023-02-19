@@ -16,7 +16,7 @@ else:
     client = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
 
 host = ""
-port = 8080
+port = 12234
 
 client.connect((host, port))
 
