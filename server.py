@@ -5,7 +5,7 @@ import datetime
 import os
 
 host = ""
-port = 12235
+port = 8080
 os.system("clear")
 
 address = (host, port)
@@ -14,7 +14,7 @@ if socket.has_dualstack_ipv6():
 else:
     server = socket.create_server(address)
 
-server.listen()
+server.listen(10)
 
 online_users = dict()
 users = []

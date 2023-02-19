@@ -5,6 +5,8 @@ import sys
 
 client_type = sys.argv[1]
 
+os.system("clear")
+
 print("Chat Platform V0")
 username = input("Please enter your username: ")
 
@@ -13,10 +15,8 @@ if client_type == "ipv4":
 else:
     client = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
 
-host = socket.gethostname()
-port = 12235
-
-os.system("clear")
+host = ""
+port = 8080
 
 client.connect((host, port))
 
